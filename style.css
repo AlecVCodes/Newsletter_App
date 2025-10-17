@@ -32,7 +32,13 @@ body {
 
 /* typography */
 
-h1 {
+h1,
+h2 {
+  font-family: inherit;
+}
+
+h1,
+h2 {
   font-size: clamp(2.5rem, 10vw, 3.5rem);
   color: var(--blue-800);
   font-weight: bold;
@@ -63,8 +69,9 @@ p {
 /*main content */
 
 main {
+  display: none;
   background-color: var(--white);
-  display: flex;
+  /* display: flex; */
   flex-direction: column-reverse;
 
   border-radius: 36px;
@@ -204,4 +211,17 @@ input:user-invalid + .email-error-message {
   .left-section {
     padding: 4.4rem 0;
   }
+}
+
+/* success container */
+
+.success-container {
+  background-color: var(--white);
+}
+
+.success-container-checkmark {
+  display: block;
+  z-index: 10;
+  opacity: 1;
+  position: relative;
 }
