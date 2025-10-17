@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Newsletter Form</title>
+  </head>
+  <body>
+    <main>
+      <div class="left-section">
+        <h1>Stay Updated!</h1>
+        <p>Join 60,000+ product managers receiving monthly updates on:</p>
+        <div class="features">
+          <div class="feature">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="21"
+              height="21"
+              viewBox="0 0 64 64"
+            >
+              <defs>
+                <linearGradient id="a" x1="100%" x2="0%" y1="0%" y2="100%">
+                  <stop offset="0%" stop-color="#FF6A3A" />
+                  <stop offset="100%" stop-color="#FF527B" />
+                </linearGradient>
+              </defs>
+              <g fill="none">
+                <circle cx="32" cy="32" r="32" fill="url(#a)" />
+                <path
+                  stroke="#FFF"
+                  stroke-width="4"
+                  d="m18.286 34.686 8.334 7.98 19.094-18.285"
+                />
+              </g>
+            </svg>
+            <p>Product discovery and building what matters</p>
+          </div>
+          <div class="feature">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="21"
+              height="21"
+              viewBox="0 0 64 64"
+            >
+              <defs>
+                <linearGradient id="a" x1="100%" x2="0%" y1="0%" y2="100%">
+                  <stop offset="0%" stop-color="#FF6A3A" />
+                  <stop offset="100%" stop-color="#FF527B" />
+                </linearGradient>
+              </defs>
+              <g fill="none">
+                <circle cx="32" cy="32" r="32" fill="url(#a)" />
+                <path
+                  stroke="#FFF"
+                  stroke-width="4"
+                  d="m18.286 34.686 8.334 7.98 19.094-18.285"
+                />
+              </g>
+            </svg>
+            <p>Measuring to ensure updates are a success</p>
+          </div>
+          <div class="feature">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="21"
+              height="21"
+              viewBox="0 0 64 64"
+            >
+              <defs>
+                <linearGradient id="a" x1="100%" x2="0%" y1="0%" y2="100%">
+                  <stop offset="0%" stop-color="#FF6A3A" />
+                  <stop offset="100%" stop-color="#FF527B" />
+                </linearGradient>
+              </defs>
+              <g fill="none">
+                <circle cx="32" cy="32" r="32" fill="url(#a)" />
+                <path
+                  stroke="#FFF"
+                  stroke-width="4"
+                  d="m18.286 34.686 8.334 7.98 19.094-18.285"
+                />
+              </g>
+            </svg>
+            <p>And much more! sda</p>
+          </div>
+        </div>
+
+        <form novalidate class="newsletter-form" id="newsletter-form">
+          <label for="email">Email Address</label>
+          <input
+            class="email-data"
+            type="email"
+            name="email"
+            id="email"
+            placeholder="email@company.com"
+          />
+          <span id="email-error" aria-live="polite" class="email-error-message"
+            >Valid Email Required</span
+          >
+          <button type="submit" class="submit-btn">
+            Subscribe to monthly newsletter
+          </button>
+        </form>
+      </div>
+      <picture>
+        <source
+          srcset="assets/images/illustration-sign-up-desktop.svg"
+          media="(width >= 1440px)"
+        />
+        <source
+          srcset="assets/images/illustration-sign-up-tablet.svg"
+          media="(width >= 768px)"
+        />
+
+        <img src="assets/images/illustration-sign-up-mobile.svg" alt="" />
+      </picture>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>

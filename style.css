@@ -1,0 +1,207 @@
+/* reset */
+html {
+  font-family: Roboto;
+}
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+  font: inherit;
+}
+
+img,
+picture,
+svg {
+  display: block;
+}
+
+input {
+  font: inherit;
+}
+
+body {
+  background-color: var(--blue-700);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* typography */
+
+h1 {
+  font-size: clamp(2.5rem, 10vw, 3.5rem);
+  color: var(--blue-800);
+  font-weight: bold;
+}
+
+p {
+  color: var(--blue-800);
+  font-size: 1rem;
+  line-height: 150%;
+}
+
+/* custom properties */
+:root {
+  --white: #fff;
+  --grey: #949494;
+  --blue-800: #242742;
+  --blue-700: #36384d;
+  --red: #ff6155;
+  --peach: #ffe7e6;
+}
+
+/* spacing */
+
+.left-section > *:not(form) {
+  margin-bottom: 2rem;
+}
+
+/*main content */
+
+main {
+  background-color: var(--white);
+  display: flex;
+  flex-direction: column-reverse;
+
+  border-radius: 36px;
+}
+
+img {
+  width: 100%;
+}
+
+.left-section {
+  padding: 2rem 2rem 2.75rem 2rem;
+}
+
+/* features */
+
+.feature {
+  height: max-content;
+  display: flex;
+  align-items: start;
+  margin-bottom: 1rem;
+}
+
+.feature > p {
+  max-width: 80%;
+}
+
+.feature > svg {
+  margin-right: 1rem;
+}
+
+/* form */
+
+form {
+  position: relative;
+}
+
+label {
+  color: var(--blue-800);
+  font-weight: bold;
+  font-size: 0.75rem;
+}
+
+input {
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+input::placeholder {
+  color: var(--grey);
+}
+
+input[type="email"] {
+  appearance: none;
+  border: 1px solid var(--grey);
+  width: 100%;
+  margin-top: 0.5rem;
+  margin-bottom: 2rem;
+}
+
+input[type="email"]:invalid {
+  appearance: none;
+}
+
+input:user-invalid {
+  background-color: var(--peach);
+  border-color: var(--red);
+  color: var(--red);
+}
+
+input[type="email"]:invalid {
+  border-color: var(--red);
+}
+.email-error-message {
+  display: none;
+}
+input:user-invalid + .email-error-message {
+  font-weight: bold;
+  display: block;
+  position: absolute;
+  top: 0%;
+  right: 0%;
+  color: var(--red);
+  font-size: 0.75rem;
+}
+/* form spacing */
+
+.submit-btn {
+  position: relative;
+  background-color: var(--blue-800);
+  color: var(--white);
+  padding: 1rem;
+  border-radius: 8px;
+  font-weight: bold;
+  width: 100%;
+  cursor: pointer;
+  overflow: hidden; /* ensures gradient overlay stays inside */
+  transition: background-color 0.3s ease;
+  isolation: isolate;
+}
+
+.submit-btn::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 106, 58, 0.73) 0%,
+    rgba(255, 82, 123, 1) 100%
+  );
+  opacity: 0;
+  transition: opacity 0.6s ease;
+  z-index: -1; /* 🟢 puts it *behind* the text */
+}
+.submit-btn span {
+  position: relative;
+  z-index: 1; /* ensures text stays above gradient */
+}
+
+.submit-btn:hover::after,
+.submit-btn:focus::after {
+  opacity: 1;
+}
+
+/* media queries */
+
+@media (min-width: 90em) {
+  img {
+    max-width: 100%;
+  }
+  main {
+    flex-direction: row;
+    padding: 1.5rem 2rem;
+    gap: 4rem;
+    width: max-content;
+  }
+
+  .left-section {
+    padding: 4.4rem 0;
+  }
+}
